@@ -1,0 +1,26 @@
+### 求最大公约数
+
+```js
+//1.辗转相除法（也叫欧几里得算法）
+function gcd(a, b) {
+  if (a % b === 0) {
+    return b
+  }
+  return gcd(b, a % b)
+}
+console.log(gcd(319, 377)) // 29
+//2.更相减损法
+function gcd(a, b) {
+  if (a === b) {
+    return b
+  }
+  if (a > b) {
+    a = a - b
+  } else {
+    b = b - a
+  }
+  return gcd(a, b)
+}
+console.log(gcd(319, 377)) // 29
+```
+
