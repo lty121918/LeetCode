@@ -24,3 +24,11 @@ function gcd(a, b) {
 console.log(gcd(319, 377)) // 29
 ```
 
+### 判断元素是否为数字
+
+```js
+function isNumber(obj) { 
+    return typeof obj === 'number' && !isNaN(obj) 
+}
+```
+
