@@ -32,3 +32,38 @@ function isNumber(obj) {
 }
 ```
 
+### 自动截取字符串长度
+
+```js
+/*
+	自动截取字符串长度，截取的部分用省略号代替。
+	str目标字符串
+	len截取的长度
+*/
+function cutString(str, len) {
+      if (str.length <= len) {
+        return str;
+      }
+      let strlen = 0;
+      let s = "";
+      for (let i = 0; i < str.length; i++) {
+        s = s + str.charAt(i);
+        if (str.charCodeAt(i) > 128) {
+          strlen = strlen + 2;
+          if (strlen >= len) {
+            return s.substring(0, s.length - 1) + "...";
+          }
+        } else {
+          strlen = strlen + 1;
+
+          if (strlen >= len) {
+            return s.substring(0, s.length - 2) + "...";
+          }
+        }
+      }
+      return s;
+    }
+```
+
+
+
