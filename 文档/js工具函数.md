@@ -67,3 +67,20 @@ function cutString(str, len) {
 
 
 
+### 获得当前时间
+
+```js
+/*
+*return 2022-02-17 17:21
+*/
+function getTime(){
+        let time=new Date();
+        let year=time.getFullYear();
+        let mounth=time.getMonth()+1;
+        let date=time.getDate();
+        let hour= time.getHours();//得到小时数
+        let minute= time.getMinutes();//得到分钟数
+        return  `${year}-${mounth}-${date}  ${hour}:${minute}`;
+    }
+```
+
